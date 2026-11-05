@@ -1,0 +1,25 @@
+services:
+  dev1:
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+    container_name: sdaintai-v0-docker1
+    ports:
+      - "8071:80"
+
+  dev2:
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+    container_name: sdaintai-v0-docker2
+    ports:
+      - "8072:80"
+
+  # Copy this block for each additional developer, bump the name/port:
+  # dev3:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.webapp
+  #   container_name: sdaintai-v0-docker3
+  #   ports:
+  #     - "8073:80"
